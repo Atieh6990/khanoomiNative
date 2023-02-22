@@ -239,6 +239,7 @@ const App = () => {
         break;
       case "fullscreen":
 
+
         // alert(data);
         // console.log(data, isFull);
         // if (data == true) {
