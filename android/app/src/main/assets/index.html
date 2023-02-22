@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920px;">
+  <title>khanoomi</title>
+  <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script>
+  <!--<script>document.write('<script type=\'text/javascript\' src=\'http://ssn.tvapps.ir/ssnapps/ssnmodule.js?t=' + new Date().getTime() + '\'><\/script>');</script>-->
+  <!--<script type="text/javascript" src="js/ssnmodule.js"></script>-->
+  <!--<script>document.write('<script type=\'text/javascript\' src=\'http://ssn.tvapps.ir/ssnapps/androidssnmodule.js?t=' + new Date().getTime() + '  \'><\/script>');</script>-->
+
+</head>
+<body style="   position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;">
+<div id="app">
+  <!--            <div style="position: absolute;width: 100px;height: 200px;top: 50px;left: 50px; background-color: blue"></div>-->
+</div>
+
+
+<script>
+  // document.write("<script type='text/javascript' src='http://ssn.tvapps.ir/hamsamClient/3.1/build.js?t=" + new Date().getTime() + "'><\/script>");
+
+  var el = document.createElement("script");
+  // el.src = 'http://samyar.rasgames.ir/hamsam/android/test/build.js?t=' + new Date().getTime() + '';//for test
+  // el.src = 'http://ssn.tvapps.ir/hamsamClient/android/V3/build.js?t=' + new Date().getTime() + '';//final build
+  el.src = "js/build.js";
+
+
+  document.body.appendChild(el);
+
+  el.onload = function() {
+    console.log("script loaded successfully");
+  };
+
+  el.onerror = function() {
+    // console.log('script failed to load');
+    document.addEventListener("keydown", function(e) {
+      console.log("keydown", e);
+      switch (e.keyCode) {
+        case 37: //LEFT arrow
+          break;
+        case 38: //UP arrow
+          break;
+        case 39: //RIGHT arrow
+          break;
+        case 40: //DOWN arrow
+          break;
+        case 13: //OK button
+          break;
+        case 10009: //RETURN button
+        case 10182: //EXIT button
+          console.log("return888888888888888888888888");
+          // tizen.application.getCurrentApplication().exit();
+          break;
+        default:
+          console.log("Key code : " + e.keyCode);
+          break;
+      }
+    });
+  };
+</script>
+</body>
+
+
+<script>
+  // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+</script>
+
+</html>
